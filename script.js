@@ -10,8 +10,6 @@ const swiper = new Swiper(".swiper", {
     },
 });
 
-const nextSlide = document.querySelector(".swiper-button-next");
-const prevSlide = document.querySelector(".swiper-button-prev");
 
 document.addEventListener("keydown", (e) => {
     if (e.key === "ArrowLeft") {

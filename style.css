@@ -21,6 +21,11 @@ body {
   align-items: center;
   min-height: 100vh;
   width: 100%;
+  position: relative;
+  background-image: url(images/pattern-curve.svg);
+  background-position: left bottom;
+  background-repeat: no-repeat;
+  bottom: 0%;
 }
 
 .swiper {
@@ -43,14 +48,15 @@ body {
 
 .content {
   font-size: 3.2rem;
+  font-weight: 300;
   line-height: 44px;
   color: var(--darkblue);
   padding-left: 6rem;
-  z-index: 1;
-  margin-top: 6rem;
+  z-index: 999;
+  margin-top: 8rem;
 }
 
-.content img {
+.content .quote {
   position: absolute;
   top: 15%;
   left: 15%;
@@ -110,4 +116,62 @@ body {
 
 .swiper-button-next {
   border-radius: 0rem 2rem 2rem 0;
+}
+
+/* Media Queries */
+
+@media (max-width: 35em) {
+  .swiper-wrapper {
+    max-width: 40rem;
+  }
+
+  .swiper-slide {
+    grid-template-columns: 1fr;
+    padding: 2rem;
+    background-position: top;
+  }
+
+  .img-content {
+    grid-row: 1;
+    text-align: center;
+    padding-right: 0;
+  }
+
+  .img-content img {
+    width: 330px;
+    height: 330px;
+  }
+
+  .content {
+    font-size: 1.7rem;
+    text-align: center;
+    line-height: 1.5;
+    margin-top: 4.5rem;
+    padding-left: 0;
+  }
+
+  .name-flex {
+    flex-direction: column;
+  }
+
+  .container .buttons {
+    top: 27%;
+    left: 30%;
+  }
+
+  .name-flex {
+    margin-top: 0.5rem;
+    gap: 0;
+  }
+
+  .name-flex .name,
+  .name-flex .occupation {
+    font-size: 1.7rem;
+  }
+
+  .content .quote {
+    top: 60%;
+    left: 50%;
+    width: 100px;
+  }
 }
